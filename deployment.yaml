@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: argocd-app
+  name: argocd-app
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: argocd-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: argocd-app
+    spec:
+      containers:
+      - image: mdhack/strategy:v2
+        name: argocd-app
+        imagePullPolicy: Always
+        ports: 
+        - containerPort: 80
