@@ -16,7 +16,7 @@ spec:
         app: argocd-app
     spec:
       containers:
-      - image: mdhack/strategy:v2
+      - image: nginx
         name: argocd-app
         imagePullPolicy: Always
         ports: 
