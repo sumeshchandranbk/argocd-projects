@@ -5,7 +5,7 @@ metadata:
     app: argocd-app
   name: argocd-app
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: argocd-app
